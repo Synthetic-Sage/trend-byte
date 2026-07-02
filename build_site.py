@@ -193,6 +193,20 @@ def main():
     with open(os.path.join(OUTPUT_DIR, "index.html"), 'w', encoding='utf-8') as f:
         f.write(index_html)
         
+    # Generate robots.txt
+    robots_txt = "User-agent: *\nAllow: /\n\nSitemap: https://synthetic-sage.github.io/trend-byte/sitemap.xml\n"
+    with open(os.path.join(OUTPUT_DIR, "robots.txt"), 'w', encoding='utf-8') as f:
+        f.write(robots_txt)
+        
+    # Generate sitemap.xml
+    sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    sitemap += f'  <url>\n    <loc>https://synthetic-sage.github.io/trend-byte/</loc>\n    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n'
+    for post in posts_data:
+        sitemap += f'  <url>\n    <loc>https://synthetic-sage.github.io/trend-byte/{post["url"]}</loc>\n    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n'
+    sitemap += '</urlset>'
+    with open(os.path.join(OUTPUT_DIR, "sitemap.xml"), 'w', encoding='utf-8') as f:
+        f.write(sitemap)
+        
     print(f"Premium site built successfully in /{OUTPUT_DIR} directory.")
 
 if __name__ == "__main__":
