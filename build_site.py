@@ -77,17 +77,9 @@ FOOTER_TEMPLATE = """
 </html>
 """
 
-AD_TOP = """
-        <div class="w-full h-24 mb-12 bg-slate-800/50 border border-dashed border-slate-700 rounded-lg flex items-center justify-center text-slate-500 text-sm font-medium">
-            Advertisement Space
-        </div>
-"""
+AD_TOP = ""
 
-AD_BOTTOM = """
-        <div class="w-full max-w-3xl mx-auto h-24 mt-12 mb-12 bg-slate-800/50 border border-dashed border-slate-700 rounded-lg flex items-center justify-center text-slate-500 text-sm font-medium">
-            Advertisement Space
-        </div>
-"""
+AD_BOTTOM = ""
 
 def extract_frontmatter(md_text):
     frontmatter = {}
