@@ -95,248 +95,732 @@
 
     <main class="max-w-4xl mx-auto px-4 py-12 flex-grow w-full z-10">
 
-        <header class="mb-16 border border-primary p-6 relative bg-background">
+        <header class="mb-12 border border-primary p-6 relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-sm font-bold">[ SYSTEM_HEADER ]</div>
             <h1 class="text-4xl md:text-6xl font-bold mb-4 uppercase">> TrendByte_Hub</h1>
             <p class="text-lg text-primary/80">> Your daily, automated feed of critical tech discussions.</p>
         </header>
+        
+        <div class="mb-8 border border-primary p-4 bg-background flex items-center">
+            <label class="text-primary font-bold mr-3">> grep -i</label>
+            <input type="text" id="terminal-filter" class="bg-background text-primary border-none outline-none flex-grow placeholder-primary/50 focus:ring-0" placeholder="_SEARCH_PACKETS..." autocomplete="off">
+        </div>
+        <script>
+            document.getElementById('terminal-filter').addEventListener('input', function(e) {
+                const query = e.target.value.toLowerCase();
+                const posts = document.querySelectorAll('.post-card');
+                let count = 0;
+                posts.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if(text.includes(query)) {
+                        card.style.display = 'block';
+                        count++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                document.getElementById('result-count').textContent = count;
+            });
+        </script>
+        
+        <div class="mb-4 text-sm">> DISPLAYING <span id="result-count">{len(posts_data)}</span> PACKETS</div>
     <div class="grid grid-cols-1 gap-6 mb-16">
 
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_144 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">EFF letter to FTC on X consent order [pdf]</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (144) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="eff-letter-to-ftc-on-x-consent-order-pdf-48766209.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_113 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Mystery identity of 'Green Boots' climber is finally solved after DNA test</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (113) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="mystery-identity-of-green-boots-climber-is-finally-solved-after-dna-test-48768336.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_28 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">How working with a blind client revealed invisible accessibility gaps</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-06-29]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (28) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="how-working-with-a-blind-client-revealed-invisible-accessibility-gaps-48725857.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
-            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_294 ]</div>
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_296 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">crustc: entirety of `rustc`, translated to C</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (296) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="crustc-entirety-of-rustc-translated-to-c-48768464.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_454 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Immich 3.0</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (454) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="immich-30-48761944.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_51 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Underwater Suit-Wearing Cyborg Insect Capable of Diving and Terra-Aqua Travel</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-06-29]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (51) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="underwater-suit-wearing-cyborg-insect-capable-of-diving-and-terra-aqua-travel-48725093.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_76 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">The first early human eggs from stem cells</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-01]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (76) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="the-first-early-human-eggs-from-stem-cells-48742483.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_122 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">24-bit/192kHz music downloads and why they make no sense (2012)</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (122) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="24-bit192khz-music-downloads-and-why-they-make-no-sense-2012-48763790.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_1080 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Claude Sonnet 5</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-06-30]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (1080) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="claude-sonnet-5-48736605.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
-            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_27 ]</div>
-            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Matrix Orthogonalization Improves Memory in Recurrent Models</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_302 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Exapunks (2018)</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (302) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="exapunks-2018-48765663.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_64 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Show HN: zkGolf – Competitive optimization of formally verified circuits</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (64) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="show-hn-zkgolf-competitive-optimization-of-formally-verified-circuits-48763246.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_139 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Claude-real-video － any LLM can watch a video</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (139) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="claude-real-video-any-llm-can-watch-a-video-48766005.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_44 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Show HN: Pieces – Social network for people</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-01]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (44) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="show-hn-pieces-social-network-for-people-48750402.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_27 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Matrix Orthogonalization Improves Memory in Recurrent Models</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-01]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (27) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="matrix-orthogonalization-improves-memory-in-recurrent-models-48742514.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_1637 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Android Developer Verification: Threat masquerading as protection</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (1637) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="android-developer-verification-threat-masquerading-as-protection-48755965.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_1836 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Claude Code is steganographically marking requests</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-06-30]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (1836) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="claude-code-is-steganographically-marking-requests-48734373.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_359 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Nano Banana 2 Lite</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-06-30]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (359) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="nano-banana-2-lite-48735444.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_108 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Great Salt Lake Tracker – Grow the Flow</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (108) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="great-salt-lake-tracker-grow-the-flow-48766286.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_623 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">PeerTube is a free, decentralized and federated video platform</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (623) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="peertube-is-a-free-decentralized-and-federated-video-platform-48759634.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_17 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Cowboys, Frontiersmen, Settlers, Townspeople, Cityfolk</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-06-29]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (17) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="cowboys-frontiersmen-settlers-townspeople-cityfolk-48720728.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_71 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">ArXiv's Next Chapter</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-01]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (71) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="arxivs-next-chapter-48741748.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_463 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Claude Science</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-06-30]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (463) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="claude-science-48735770.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
-            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_33 ]</div>
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_52 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Quake in 13 Kilobytes (2021)</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-06-26]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (52) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="quake-in-13-kilobytes-2021-48693428.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_35 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Wordgard: The new in-browser rich-text editor from the creator of ProseMirror</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (35) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="wordgard-the-new-in-browser-rich-text-editor-from-the-creator-of-prosemirror-48772573.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_326 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">An American Privacy Emergency</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (326) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="an-american-privacy-emergency-48768992.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_616 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-01]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (616) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="department-of-commerce-has-lifted-export-controls-on-claude-fable-5-and-mythos-5-48740771.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
-            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_231 ]</div>
-            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Half-Baked Product</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_9 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Commodore 64 Basic for PostgreSQL</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (9) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="commodore-64-basic-for-postgresql-48772717.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_551 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Podman v6.0.0</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (551) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="podman-v600-48762098.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_24 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Perform DFU Restores on Apple Silicon Macs with Macvdmtool (2021)</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-06-29]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (24) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="perform-dfu-restores-on-apple-silicon-macs-with-macvdmtool-2021-48724608.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_242 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Half-Baked Product</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (242) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="half-baked-product-48772388.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_77 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">FoundationDB's Flow – Bringing Actor-Based Concurrency to C++11</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (77) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="foundationdbs-flow-bringing-actor-based-concurrency-to-c11-48762372.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_118 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">The Safari MCP server for web developers</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (118) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="the-safari-mcp-server-for-web-developers-48769639.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_111 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">This is my attempt to get Vulkan going on NetBSD</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (111) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="this-is-my-attempt-to-get-vulkan-going-on-netbsd-48765607.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_189 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Leanstral 1.5</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-01]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (189) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="leanstral-15-48738938.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
-            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_826 ]</div>
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_9 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Ed Zitron on CNBC: GenAI Doesn't Work, and Big Tech Is Out of Hypergrowth Ideas</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (9) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="ed-zitron-on-cnbc-genai-doesnt-work-and-big-tech-is-out-of-hypergrowth-ideas-48773580.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_827 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Virginia bans sale of geolocation data</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (827) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="virginia-bans-sale-of-geolocation-data-48767347.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
-            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_347 ]</div>
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_143 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">The short leash AI coding method for beating Fable</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (143) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="the-short-leash-ai-coding-method-for-beating-fable-48766026.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_349 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">CarPlay Is Additive</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (349) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="carplay-is-additive-48769397.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
-            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_121 ]</div>
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_125 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Alibaba to ban Claude Code in workplace over alleged backdoor risks, source says</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (125) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="alibaba-to-ban-claude-code-in-workplace-over-alleged-backdoor-risks-source-says-48772443.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
-            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_295 ]</div>
-            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Right to Local Intelligence</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_61 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">14× faster embeddings: how we rebuilt the ONNX path in Manticore</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (61) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="14-faster-embeddings-how-we-rebuilt-the-onnx-path-in-manticore-48770477.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_161 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Superpowers 6</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-06-30]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (161) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="superpowers-6-48739459.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_82 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Lightning Memory-Mapped Database Manager (LMDB) 1.0</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (82) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="lightning-memory-mapped-database-manager-lmdb-10-48766598.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_298 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Right to Local Intelligence</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (298) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="right-to-local-intelligence-48768951.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
-            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_6 ]</div>
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_68 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">A Special Wireless-Free Nikon Camera Is Publicly Available for the First Time</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-06-25]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (68) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="a-special-wireless-free-nikon-camera-is-publicly-available-for-the-first-time-48667568.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_10 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Gun Mistakes in Fiction Writing: Handgun Edition</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-03]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (10) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="gun-mistakes-in-fiction-writing-handgun-edition-48773652.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
         </div>
         
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_189 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Postgres transactions are a distributed systems superpower</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (189) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="postgres-transactions-are-a-distributed-systems-superpower-48765639.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_285 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Reality has a surprising amount of detail (2017)</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-06-27]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (285) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="reality-has-a-surprising-amount-of-detail-2017-48702874.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_11 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Q&A with Micron's VP and GM of Memory</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-06-30]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (11) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="qa-with-microns-vp-and-gm-of-memory-48738244.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+            <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_488 ]</div>
+            <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Since Linux 6.9, LUKS suspend stopped wiping disk-encryption keys from memory</h2>
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
+                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span>[SYS_TIME: 2026-07-02]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
+            </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (488) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
+            <div>
+                <a href="since-linux-69-luks-suspend-stopped-wiping-disk-encryption-keys-from-memory-48763035.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            </div>
+        </div>
+        
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_185 ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">Google copybara: moving code between repositories</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: 2026-07-01]</span>
+                <span>[TARGET: news.ycombinator.com]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score (185) detected at destination node news.ycombinator.com. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="google-copybara-moving-code-between-repositories-48740698.html" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
