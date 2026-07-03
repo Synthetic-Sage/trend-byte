@@ -100,9 +100,40 @@ HEADER_TEMPLATE = """<!DOCTYPE html>
 
 FOOTER_TEMPLATE = """
     </main>
-    <footer class="border-t border-primary border-dashed mt-auto py-8 text-center text-sm z-10">
-        <p>> root: EOF</p>
-        <p class="mt-2 text-textMuted">&copy; 2024 TrendByte [STATUS: ONLINE]</p>
+    <footer class="border-primary border-dashed bg-background mt-auto relative z-50">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-sm text-primary">
+                <div>
+                    <h3 class="font-bold mb-4 text-white hover:text-primary transition-colors">TrendByte</h3>
+                    <p class="opacity-70">Empowering professionals with top-tier tools.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4 text-white hover:text-primary transition-colors">Tools</h3>
+                    <ul class="space-y-2 opacity-70">
+                        <li><a href="/" class="hover:text-white hover:text-primary transition-colors">Home</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4 text-white hover:text-primary transition-colors">Company</h3>
+                    <ul class="space-y-2 opacity-70">
+                        <li><a href="/about.html" class="hover:text-white hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="/contact.html" class="hover:text-white hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4 text-white hover:text-primary transition-colors">Legal &amp; Compliance</h3>
+                    <ul class="space-y-2 opacity-70">
+                        <li><a href="/privacy-policy.html" class="hover:text-white hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html" class="hover:text-white hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="/disclaimer.html" class="hover:text-white hover:text-primary transition-colors font-bold">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-primary border-dashed pt-8 flex flex-col md:flex-row justify-between items-center text-primary opacity-70 text-xs font-semibold">
+                <p>&copy; 2026 TrendByte. All rights reserved.</p>
+                <p class="mt-4 md:mt-0">Content is aggregated/curated from third-party sources. TrendByte does not claim ownership of linked articles.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
@@ -194,7 +225,8 @@ def main():
             'title': title,
             'date': date,
             'score': score,
-            'url': filename
+            'local_url': filename,
+            'url': frontmatter.get('url', filename)
         })
         print(f"> COMPILED: {filename}")
         
@@ -244,22 +276,37 @@ def main():
     index_html += '<div class="grid grid-cols-1 gap-6 mb-16">\n'
     
     for post in posts_data:
-        domain_str = post.get('domain', 'news.ycombinator.com')
-        index_html += f"""
+        import urllib.parse
+        raw_url = post.get('url', '')
+        domain_str = post.get('domain', '')
+        if not domain_str and raw_url and raw_url.startswith('http'):
+            domain_str = urllib.parse.urlparse(raw_url).netloc
+        if not domain_str:
+            domain_str = 'unknown.node'
+            
+        score_val = int(post.get('score', 0))
+        status = 'TRENDING' if score_val > 100 else 'ACTIVE'
+        
+        # We will use post['local_url'] for the generated HTML file, and post['url'] for the external link.
+        local_url = post.get('local_url', '#')
+        ext_url = post.get('url', local_url)
+        
+        index_html += f'''
         <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_{post['score']} ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">{post['title']}</h2>
             <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
-                <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
+                <span class="border border-primary px-2 py-0.5">> STATUS: {status}</span>
                 <span>[SYS_TIME: {post['date']}]</span>
                 <span>[TARGET: {domain_str}]</span>
             </div>
-            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score ({post['score']}) detected at destination node {domain_str}. Network consensus indicates critical tech sector disruption. User action advised.</p>
-            <div>
-                <a href="{post['url']}" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: Threat score ({post['score']}) detected at destination node {domain_str}. Network consensus indicates tech sector activity.</p>
+            <div class="flex gap-4 flex-wrap">
+                <a href="{local_url}" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ READ_LOCAL ]</a>
+                <a href="{ext_url}" target="_blank" rel="noopener noreferrer" class="inline-block text-primary border border-primary border-dashed px-4 py-2 hover:border-solid hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ ACCESS_REMOTE ]</a>
             </div>
         </div>
-        """
+        '''
         
     index_html += '</div>\n'
     index_html += AD_BOTTOM
