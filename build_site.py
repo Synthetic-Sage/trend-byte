@@ -211,24 +211,50 @@ def main():
     """
     index_html = HEADER_TEMPLATE.format(title="TrendByte | Terminal", schema_markup=schema)
     index_html += """
-        <header class="mb-16 border border-primary p-6 relative bg-background">
+        <header class="mb-12 border border-primary p-6 relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-sm font-bold">[ SYSTEM_HEADER ]</div>
             <h1 class="text-4xl md:text-6xl font-bold mb-4 uppercase">> TrendByte_Hub</h1>
             <p class="text-lg text-primary/80">> Your daily, automated feed of critical tech discussions.</p>
         </header>
+        
+        <div class="mb-8 border border-primary p-4 bg-background flex items-center">
+            <label class="text-primary font-bold mr-3">> grep -i</label>
+            <input type="text" id="terminal-filter" class="bg-background text-primary border-none outline-none flex-grow placeholder-primary/50 focus:ring-0" placeholder="_SEARCH_PACKETS..." autocomplete="off">
+        </div>
+        <script>
+            document.getElementById('terminal-filter').addEventListener('input', function(e) {
+                const query = e.target.value.toLowerCase();
+                const posts = document.querySelectorAll('.post-card');
+                let count = 0;
+                posts.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if(text.includes(query)) {
+                        card.style.display = 'block';
+                        count++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                document.getElementById('result-count').textContent = count;
+            });
+        </script>
+        
+        <div class="mb-4 text-sm">> DISPLAYING <span id="result-count">{len(posts_data)}</span> PACKETS</div>
     """
-    index_html += AD_TOP
     index_html += '<div class="grid grid-cols-1 gap-6 mb-16">\n'
     
     for post in posts_data:
+        domain_str = post.get('domain', 'news.ycombinator.com')
         index_html += f"""
-        <div class="border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
+        <div class="post-card border border-primary border-dashed p-6 hover:border-solid hover:bg-primary/5 transition-all group relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-xs text-primary transition-colors">[ RECORD_{post['score']} ]</div>
             <h2 class="text-xl md:text-2xl font-bold leading-tight mb-4 uppercase group-hover:text-white transition-colors">{post['title']}</h2>
-            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-6">
+            <div class="flex flex-wrap items-center gap-4 text-primary text-sm mb-4">
                 <span class="border border-primary px-2 py-0.5">> STATUS: TRENDING</span>
                 <span>[SYS_TIME: {post['date']}]</span>
+                <span>[TARGET: {domain_str}]</span>
             </div>
+            <p class="text-textMuted text-sm mb-6">> DECRYPTING SUMMARY: High threat score ({post['score']}) detected at destination node {domain_str}. Network consensus indicates critical tech sector disruption. User action advised.</p>
             <div>
                 <a href="{post['url']}" class="inline-block text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors font-bold uppercase">[ EXECUTE ]</a>
             </div>
