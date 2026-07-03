@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | TrendByte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#33FF00', 
+                        background: '#050505',
+                        textMuted: '#1A3D1A'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-primary font-sans min-h-screen flex flex-col">
+    <nav class="border-b border-primary border-dashed sticky top-0 z-50 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-white hover:text-primary transition-colors">TrendByte</a>
+        </div>
+    </nav>
+    <main class="flex-grow z-10 max-w-4xl mx-auto px-6 py-12 w-full">
+        <h1 class="text-4xl font-bold mb-8 text-white hover:text-primary transition-colors">About Us</h1>
+        <div class="prose max-w-none text-primary">
+            <p>We build tools to help you make better decisions.</p>
+        </div>
+    </main>
+    <footer class="border-primary border-dashed bg-background mt-auto relative z-50">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-sm text-primary">
+                <div>
+                    <h3 class="font-bold mb-4 text-white hover:text-primary transition-colors">TrendByte</h3>
+                    <p class="opacity-70">Empowering professionals with top-tier tools.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4 text-white hover:text-primary transition-colors">Tools</h3>
+                    <ul class="space-y-2 opacity-70">
+                        <li><a href="/" class="hover:text-white hover:text-primary transition-colors">Home</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4 text-white hover:text-primary transition-colors">Company</h3>
+                    <ul class="space-y-2 opacity-70">
+                        <li><a href="/about.html" class="hover:text-white hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="/contact.html" class="hover:text-white hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4 text-white hover:text-primary transition-colors">Legal &amp; Compliance</h3>
+                    <ul class="space-y-2 opacity-70">
+                        <li><a href="/privacy-policy.html" class="hover:text-white hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html" class="hover:text-white hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="/disclaimer.html" class="hover:text-white hover:text-primary transition-colors font-bold">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-primary border-dashed pt-8 flex flex-col md:flex-row justify-between items-center text-primary opacity-70 text-xs font-semibold">
+                <p>&copy; 2026 TrendByte. All rights reserved.</p>
+                <p class="mt-4 md:mt-0">Content is aggregated/curated from third-party sources. TrendByte does not claim ownership of linked articles.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
