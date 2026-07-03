@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://trendbyte.local/sitemap.xml
+Sitemap: https://synthetic-sage.github.io/trend-byte/sitemap.xml
