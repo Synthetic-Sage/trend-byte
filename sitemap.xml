@@ -25,12 +25,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/a-peek-into-reddits-anti-spam-internals-48699010.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/soatoks-informal-guide-to-threat-models-48781597.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -56,6 +50,12 @@
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/underwater-suit-wearing-cyborg-insect-capable-of-diving-and-terra-aqua-travel-48725093.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/the-scanline-sweeper-a-glyph-rendering-algorithm-pdf-48746429.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -121,6 +121,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/show-hn-classify-mechanical-faults-using-contrastive-language-audio-pretraining-48749868.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/matrix-orthogonalization-improves-memory-in-recurrent-models-48742514.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -157,25 +163,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/scientists-discover-guidance-system-for-migratory-songbirds-48781274.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/postgresql-and-the-oom-killer-why-we-use-strict-memory-overcommit-48774509.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/show-hn-a-statically-typed-cross-platform-easily-bootstrappable-build-system-48735097.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/dispersion-loss-counteracts-embedding-condensation-in-small-language-models-48780826.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -217,13 +205,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/the-circuit-that-lets-your-brain-think-and-see-48780996.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/giant-trees-have-no-trouble-pumping-water-to-top-branches-new-research-48780870.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/giant-trees-have-no-trouble-pumping-water-to-top-branches-new-research-48780870.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/ship-traces-journey-spanish-armada-sailors-made-in-1588-48739644.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -259,12 +247,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/gitfut-your-github-stats-turned-into-a-world-cup-style-player-card-48780812.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/jamesobs-guide-to-running-sota-llms-locally-48775921.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -272,6 +254,12 @@
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/quake-in-13-kilobytes-2021-48693428.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/show-hn-morph-reflexes-multi-head-classifiers-for-agent-traces-48739038.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -397,6 +385,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/postgres-data-stored-in-parquet-on-s3-ltap-architecture-explained-48745855.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/hunting-a-16-year-old-sqlite-wal-bug-with-tla-48730953.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -439,6 +433,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/astrophysicists-puzzle-over-webbs-new-universe-48783948.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/reverse-engineering-codemasters-bigf-archive-format-in-ruby-48735811.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -451,13 +451,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/africans-are-turning-to-starlink-48779977.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/farmer-marketer-at-odds-over-sales-of-white-nectarines-48778031.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/ask-hn-is-anyone-experimenting-with-different-ways-of-using-llms-for-coding-48771515.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/the-vespa-at-80-why-the-italian-scooter-remains-the-coolest-thing-on-2-wheels-48746327.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
