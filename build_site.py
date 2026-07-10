@@ -201,27 +201,9 @@ def main():
             <label class="text-primary font-bold mr-3">> grep -i</label>
             <input type="text" id="terminal-filter" class="bg-background text-primary border-none outline-none flex-grow placeholder-primary/50 focus:ring-0" placeholder="_SEARCH_PACKETS..." autocomplete="off">
         </div>
-        <script>
-            document.getElementById('terminal-filter').addEventListener('input', function(e) {
-                const query = e.target.value.toLowerCase();
-                const posts = document.querySelectorAll('.post-card');
-                let count = 0;
-                posts.forEach(card => {
-                    const text = card.textContent.toLowerCase();
-                    if(text.includes(query)) {
-                        card.style.display = 'block';
-                        count++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                document.getElementById('result-count').textContent = count;
-            });
-        </script>
-        
         <div class="mb-4 text-sm">> DISPLAYING <span id="result-count">{len(posts_data)}</span> PACKETS</div>
     """
-    index_html += '<div class="grid grid-cols-1 gap-6 mb-16">\n'
+    index_html += '<div id="posts-container" class="grid grid-cols-1 gap-6 mb-8">\n'
     
     for post in posts_data:
         import urllib.parse
@@ -257,6 +239,64 @@ def main():
         '''
         
     index_html += '</div>\n'
+    
+    # Pagination and Search Script
+    index_html += """
+        <div class="flex justify-center mb-16">
+            <button id="load-more-btn" class="border border-primary px-6 py-3 text-primary hover:bg-primary hover:text-background transition-colors font-bold uppercase tracking-wider hidden">
+                [ LOAD_MORE_PACKETS ]
+            </button>
+        </div>
+        
+        <script>
+            let visibleCount = 10;
+            let currentQuery = '';
+            
+            function updateVisibility() {
+                const posts = document.querySelectorAll('.post-card');
+                let matchCount = 0;
+                let visibleNow = 0;
+                
+                posts.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if(text.includes(currentQuery)) {
+                        matchCount++;
+                        if(matchCount <= visibleCount) {
+                            card.style.display = 'block';
+                            visibleNow++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                document.getElementById('result-count').textContent = visibleNow + ' / ' + matchCount;
+                
+                const loadMoreBtn = document.getElementById('load-more-btn');
+                if (matchCount > visibleCount) {
+                    loadMoreBtn.style.display = 'inline-block';
+                } else {
+                    loadMoreBtn.style.display = 'none';
+                }
+            }
+            
+            document.getElementById('terminal-filter').addEventListener('input', function(e) {
+                currentQuery = e.target.value.toLowerCase();
+                visibleCount = 10;
+                updateVisibility();
+            });
+            
+            document.getElementById('load-more-btn').addEventListener('click', function() {
+                visibleCount += 10;
+                updateVisibility();
+            });
+            
+            // Initialize view
+            updateVisibility();
+        </script>
+    """
     
     # Inject SEO Content Block
     index_html += """
