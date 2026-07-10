@@ -289,9 +289,16 @@ def main():
     with open(os.path.join(OUTPUT_DIR, "sitemap.xml"), 'w', encoding='utf-8') as f:
         f.write(sitemap)
         
+    import platform
     import subprocess
     print("> COMPILING TAILWIND CSS...")
-    subprocess.run(["tailwindcss.exe", "-i", "input.css", "-o", "public/styles.css", "--minify"])
+    tailwind_cmd = "tailwindcss.exe" if platform.system() == "Windows" else "./tailwindcss"
+    try:
+        subprocess.run([tailwind_cmd, "-i", "input.css", "-o", "public/styles.css", "--minify"], check=True)
+    except FileNotFoundError:
+        print(f"> WARNING: {tailwind_cmd} not found. Skipping CSS compilation.")
+    except subprocess.CalledProcessError as e:
+        print(f"> ERROR compiling CSS: {e}")
     print("> BUILD_SEQUENCE_COMPLETE: /public")
 
 if __name__ == "__main__":
