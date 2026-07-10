@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrendByte | Terminal</title>
+    <title>TrendByte | Terminal | TrendByte Tech News</title>
+    <meta name="description" content="Access the top trending tech news, programming discussions, and Hacker News insights daily on TrendByte's terminal interface.">
+    <meta name="keywords" content="Tech News, Hacker News, Programming, Software Engineering, Developer News">
     <meta name="google-site-verification" content="cYEGz4VEddhjiC7JheW4BjuhlZDbfq6EEmkmXTUiJyA" />
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "TrendByte",
       "url": "https://trendbyte.local/"
     }
     </script>
@@ -18,62 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        mono: ['"JetBrains Mono"', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#33FF00', 
-                        background: '#050505',
-                        surface: '#050505',
-                        textMain: '#33FF00',
-                        textMuted: '#1A3D1A'
-                    },
-                    animation: {
-                        'flicker': 'flicker 0.15s infinite',
-                        'cursor': 'cursor .75s step-end infinite'
-                    },
-                    keyframes: {
-                        flicker: {
-                            '0%': { opacity: '0.98' },
-                            '50%': { opacity: '1' },
-                            '100%': { opacity: '0.99' }
-                        },
-                        cursor: {
-                            '0%, 100%': { opacity: '1' },
-                            '50%': { opacity: '0' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            border-radius: 0 !important;
-        }
-        * {
-            border-radius: 0 !important;
-        }
-        /* CRT Scanline Overlay */
-        body::before {
-            content: " ";
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            z-index: 50;
-            background-size: 100% 2px, 3px 100%;
-            pointer-events: none;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body class="bg-background text-primary font-mono antialiased min-h-screen flex flex-col selection:bg-primary selection:text-background animate-flicker">
 
@@ -98,8 +44,9 @@
 
         <header class="mb-12 border border-primary p-6 relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-sm font-bold">[ SYSTEM_HEADER ]</div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 uppercase">> TrendByte_Hub</h1>
-            <p class="text-lg text-primary/80">> Your daily, automated feed of critical tech discussions.</p>
+            <h1 class="sr-only">Top Tech News, Hacker News Trends, and Programming Discussions 2026</h1>
+            <div class="text-4xl md:text-6xl font-bold mb-4 uppercase" aria-hidden="true">> TrendByte_Hub</div>
+            <p class="text-lg text-primary/80">> Your daily, automated feed of critical tech discussions and software engineering news.</p>
         </header>
         
         <div class="mb-8 border border-primary p-4 bg-background flex items-center">
@@ -878,6 +825,14 @@
         </div>
         </div>
 
+        <section class="border border-primary border-dashed p-6 mb-16 bg-background">
+            <h2 class="text-xl font-bold mb-4">> WHY_USE_TRENDBYTE?</h2>
+            <div class="text-textMuted text-sm space-y-4">
+                <p>TrendByte is the ultimate terminal-style aggregator for <strong>top tech news</strong>, <strong>programming discussions</strong>, and <strong>Hacker News trends</strong>. Designed for developers and software engineers, our system autonomously scrapes, analyzes, and delivers the highest-signal discussions from across the web directly to your terminal UI.</p>
+                <p>Stay ahead of the curve with daily updates on artificial intelligence, web development, cybersecurity, and open-source releases. Bypass the noise and access purely technical insights with our blazing-fast, zero-bloat platform.</p>
+            </div>
+        </section>
+    
     </main>
     <footer class="border-primary border-dashed bg-background mt-auto relative z-50">
         <div class="max-w-7xl mx-auto px-6 py-12">
