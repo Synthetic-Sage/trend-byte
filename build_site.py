@@ -189,7 +189,7 @@ def main():
     </script>
     """
     index_html = HEADER_TEMPLATE.format(title="TrendByte | Terminal", schema_markup=schema)
-    index_html += """
+    index_html += f"""
         <header class="mb-12 border border-primary p-6 relative bg-background">
             <div class="absolute -top-3 left-4 bg-background px-2 text-sm font-bold">[ SYSTEM_HEADER ]</div>
             <h1 class="sr-only">Top Tech News, Hacker News Trends, and Programming Discussions 2026</h1>
