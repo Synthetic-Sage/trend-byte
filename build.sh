@@ -9,7 +9,7 @@ echo "> Installing Python dependencies..."
 python3 -m pip install markdown
 
 echo "> Downloading Tailwind CSS CLI..."
-curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
+curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64
 chmod +x tailwindcss-linux-x64
 mv tailwindcss-linux-x64 tailwindcss
 

@@ -332,7 +332,7 @@ def main():
     import platform
     import subprocess
     print("> COMPILING TAILWIND CSS...")
-    tailwind_cmd = "tailwindcss.exe" if platform.system() == "Windows" else "./tailwindcss"
+    tailwind_cmd = "./tailwindcss.exe" if platform.system() == "Windows" else "./tailwindcss"
     try:
         subprocess.run([tailwind_cmd, "-i", "input.css", "-o", "public/styles.css", "--minify"], check=True)
     except FileNotFoundError:
