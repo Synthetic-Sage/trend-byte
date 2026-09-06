@@ -7,12 +7,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/nitter-has-more-working-instances-than-before-the-takedowns-49571634.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/qa-with-microns-vp-and-gm-of-memory-48738244.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -26,6 +20,12 @@
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/this-is-my-attempt-to-get-vulkan-going-on-netbsd-48765607.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/the-pencil-case-model-of-creativity-49585703.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -61,7 +61,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/okf-agent-memory-git-native-persistent-memory-for-ai-coding-agents-49581240.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/asahi-linux-now-officially-supports-apple-m3-macs-with-caveats-49586698.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/music-theory-for-programmers-49541888.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -74,12 +80,6 @@
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/nano-banana-2-lite-48735444.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/gateside-by-tsa-precheck-49582410.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -103,18 +103,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/a-bizarre-commodore-64-peripheral-a-mime-and-some-pretty-bad-ads-49575859.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/steffens-polyhedron-49552615.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/the-short-leash-ai-coding-method-for-beating-fable-48766026.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -127,13 +115,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/chc5-open-camera-system-image-sensor-specification-comparison-49543347.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/ai-shuts-down-stay-human-49586898.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/underwater-suit-wearing-cyborg-insect-capable-of-diving-and-terra-aqua-travel-48725093.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/the-colorchecker-photographys-most-important-24-squares-turns-50-49529398.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -151,25 +145,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/isar-aerospace-5-sept-mission-onward-and-upward-49579956.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/isar-aerospace-launch-into-orbit-video-49580325.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/can-ai-design-circuit-boards-yet-49569366.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation-2014-49580329.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/dont-use-a-gmailcom-address-49585594.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -199,7 +175,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/singapore-subway-mrt-information-display-types-49535940.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/i-changed-my-license-49585161.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -211,7 +187,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/ask-hn-resources-to-get-good-at-soldering-49533840.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/old-person-smell-49585520.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -241,19 +217,49 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/im-teaching-an-introductory-12-week-course-on-quantum-oracle-engineering-49586151.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/household-laser-cuts-49569983.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/the-empire-of-information-49535122.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/openbsd-stories-strange-medieval-devices-49539759.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/department-of-commerce-has-lifted-export-controls-on-claude-fable-5-and-mythos-5-48740771.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/a-million-falcons-went-missing-heres-how-they-were-found-49540253.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/ai-tools-and-transformation-49582656.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/cowboys-frontiersmen-settlers-townspeople-cityfolk-48720728.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/m-disc-dvdblu-ray-compatible-discs-that-may-last-up-to-1000-years-49531619.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -277,13 +283,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/terpstra-keyboard-49575150.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/doomscrolling-ourselves-to-death-49585627.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/delidded-intel-i9-14900ks-ct-scan-49539110.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/the-many-mysteries-and-lessons-of-the-bayeux-tapestry-49586435.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -301,13 +313,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/formalizing-fermats-last-theorem-49568506.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/gpt-6-astra-on-openrouter-49570545.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/2026-hugo-awards-49586005.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -326,12 +332,6 @@
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/podman-v600-48762098.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/south-african-diamond-mines-are-closing-due-to-weak-sales-and-lab-grown-stones-49580778.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -385,18 +385,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/wikimedia-foundation-workers-overwhelmingly-vote-to-form-union-with-cwa-49577975.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/show-hn-fly-by-retro-biplane-flying-game-49519101.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/great-salt-lake-tracker-grow-the-flow-48766286.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -404,6 +392,12 @@
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/eff-letter-to-ftc-on-x-consent-order-pdf-48766209.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/show-hn-kadō-open-source-habit-tracker-with-non-binary-habit-score-for-ios-49586902.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -427,13 +421,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/git-hosting-that-never-leaves-europe-49573680.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight-49584083.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/actively-exploited-sandbox-rce-in-all-chromium-versions-49570669.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/intellectual-fly-is-open-2025-49585644.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -457,7 +451,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/statichosteu-european-static-site-hosting-49569896.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/amd-based-freebsd-desktop-reloaded-49582719.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/ibm-quantum-nighthawk-r2-49546198.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -487,25 +487,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/schemy-lisp-en-dos-49586139.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://synthetic-sage.github.io/trend-byte/foundationdbs-flow-bringing-actor-based-concurrency-to-c11-48762372.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/gitignore-everything-by-default-49576258.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/gpt-6-astra-on-robot-arms-49582582.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/show-hn-open-source-eink-bike-computer-49567437.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/new-all-in-one-6502-computer-neo6502kbd-49585605.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -517,7 +511,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synthetic-sage.github.io/trend-byte/stopping-the-unstoppable-when-an-unstoppable-force-meets-a-dashpot-snubber-49525188.html</loc>
+    <loc>https://synthetic-sage.github.io/trend-byte/fileregister-tagging-and-reference-layer-for-your-files-in-plain-text-49522942.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -536,6 +530,12 @@
   </url>
   <url>
     <loc>https://synthetic-sage.github.io/trend-byte/mystery-identity-of-green-boots-climber-is-finally-solved-after-dna-test-48768336.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synthetic-sage.github.io/trend-byte/what-is-nueralese-and-why-is-it-bad-49559451.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
